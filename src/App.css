@@ -11,6 +11,21 @@ navbar{
   align-items: center;
 }
 
+.MuiSvgIcon-root{
+    /* display: block !important; */
+    display: none !important;
+    font-size: 2em !important;
+    margin-block-start: 0.90em !important;
+}
+
+.logo{
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+
+
+
+
 .menu_items{
   display: flex;
   flex-wrap: wrap;
@@ -19,6 +34,50 @@ navbar{
 .menu_items h5{
   margin-left: 2rem;
 }
+
+@media only screen and (max-width: 700px){
+  .menu_items{
+    display: none;
+  }
+
+  .menu_items_mobile{
+    position: absolute;
+    display: block;
+    background-color: aqua;
+    left: 0;
+    top: 75px;
+    transition: all 0.5s ease-out;
+    width: 100%;
+  }
+  .menu_items_mobile h5{
+    color: white;
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .MuiSvgIcon-root{
+    display: inline-block !important;
+  }
+
+  navbar{
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+  }
+
+  .logo{
+    display: flex;
+    margin-left: 0.50em;
+  }
+
+  .logo h1{
+    margin-left: 0.50em;
+  }
+}
+
+
 
 
 .content{
@@ -42,7 +101,7 @@ navbar{
   margin-top: 3rem;
 }
 
-button{
+.btn{
   margin: 1rem;
   width: 8rem;
   height: 3rem;
@@ -53,7 +112,7 @@ button{
 }
 
 
-button:hover {
+.btn:hover {
   background-color:#FFD700; /* Green */
   color: white;
 }

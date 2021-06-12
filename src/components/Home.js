@@ -1,16 +1,25 @@
 import { AccountBalanceWalletTwoTone, DynamicFeed, EmojiObjects, HttpsTwoTone } from '@material-ui/icons'
-import React from 'react'
-
-
+import React, { useState } from 'react'
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 function Home() {
+    const [isMenu, setMenu] = useState(false)
     return (
         <>
             <div className="container">
                 <navbar>
-                    <div className="logo">
+                    <div className="logo" >
+                        <button onClick={() => (setMenu(!isMenu))}>
+                            {
+                                isMenu ? <CloseIcon /> : <MenuIcon />
+                            }
+                        </button>
                         <h1>BAKER</h1>
                     </div>
-                    <div className="menu_items">
+                    <div className={isMenu ? "menu_items_mobile" : "menu_items"}>
+                        {/* // onClick={() => setMenu(false)}> */}
+
+
                         <h5>Home</h5>
                         <h5>About</h5>
                         <h5>Serives</h5>
@@ -26,15 +35,15 @@ function Home() {
                         <h3>We Are At Baker</h3>
                         <h1>Starting A new Journey!!</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                        optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                        obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                        nihil, eveniet aliquid culpa officia aut!</p>
+                            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                            optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                            obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                            nihil, eveniet aliquid culpa officia aut!</p>
                     </div>
                     <div className="buttons">
-                        <button>Download Now</button>
-                        <button>Learn More</button>
+                        <button className="btn">Download Now</button>
+                        <button className="btn">Learn More</button>
                     </div>
                 </section>
             </div>
