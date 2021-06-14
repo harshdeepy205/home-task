@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Home from './components/Home'
+// import Home from './components/Home'
+import ImageSlider from './components/Slider/ImageSlider';
+import { SliderData } from './components/Slider/SliderData';
 function App() {
   return (
     <div className="App">
-      <Home />
+      {/* <Home /> */}
+      <ImageSlider slides={SliderData} />
     </div>
   );
 }
