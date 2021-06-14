@@ -1,11 +1,11 @@
-.container{
+.container {
   /* background:whitesmoke; */
   height: 100vh;
 }
 
 /* navbar css */
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -18,44 +18,42 @@
   position: sticky;
 }
 
-.navbar.active{
-  background:blue ;
+.navbar.active {
+  background: blue;
 }
 
-.MuiSvgIcon-root{
-    /* display: block !important; */
-    display: none !important;
-    font-size: 2em !important;
-    margin-block-start: 0.90em !important;
+.MuiSvgIcon-root {
+  /* display: block !important; */
+  display: none !important;
+  font-size: 2em !important;
+  margin-block-start: 0.9em !important;
 }
 
-
-button{
+button {
   display: none;
 }
 
-
-.menu_items{
+.menu_items {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.menu_items h5{
+.menu_items h5 {
   margin-left: 2rem;
 }
 
-@media only screen and (max-width: 700px){
-  button{
+@media only screen and (max-width: 700px) {
+  button {
     display: grid;
-  background-color: transparent;
-border: none;
+    background-color: transparent;
+    border: none;
   }
-  
-  .menu_items{
+
+  .menu_items {
     display: none;
   }
 
-  .menu_items_mobile{
+  .menu_items_mobile {
     position: fixed;
     display: block;
     background-color: aqua;
@@ -65,7 +63,7 @@ border: none;
     width: 100%;
     height: auto;
   }
-  .menu_items_mobile h5{
+  .menu_items_mobile h5 {
     /* color: white; */
     text-align: center;
     /* padding: 32px; */
@@ -73,117 +71,140 @@ border: none;
     transition: all 0.5s ease;
   }
 
-  .MuiSvgIcon-root{
+  .MuiSvgIcon-root {
     display: inline-block !important;
   }
 
-  .navbar{
+  .navbar {
     display: flex;
     /* align-items: flex-start; */
     justify-content: flex-start;
   }
 
-  .logo{
+  .logo {
     display: flex;
-    margin-left: 0.50em;
+    margin-left: 0.5em;
     align-items: baseline;
   }
 
-  .logo h1{
-    margin-left: 0.50em;
+  .logo h1 {
+    margin-left: 0.5em;
   }
 }
 
-
-
-
-.content{
+.content {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
 }
 
-.content h1,h3{
+.content h1,
+h3 {
   text-transform: uppercase;
   text-align: center;
 }
 
-.content p{
+.content p {
   margin: 0px 15%;
 }
 
-.buttons{
+.buttons {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
 }
 
-.btn{
+.btn {
   margin: 1rem;
   width: 8rem;
   height: 3rem;
   border-radius: 50px;
   background-color: transparent;
   color: black;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
 }
-
 
 .btn:hover {
-  background-color:#FFD700; /* Green */
+  background-color: #ffd700; /* Green */
   color: white;
 }
-@media only screen and (max-width: 460px){
-  .section-class{
-  /* margin-top: 60% !important; */
-}
-  .card{
+@media only screen and (max-width: 460px) {
+  .section-class {
+    /* margin-top: 60% !important; */
+  }
+  .card {
     flex-wrap: wrap;
   }
-
 }
 
-.card{
+.card {
   display: flex;
-    margin: 0px 20%;
-    /* flex-wrap: wrap; */
+  margin: 0px 20%;
+  /* flex-wrap: wrap; */
 }
-.card-each{
+.card-each {
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.card-each  .MuiSvgIcon-root{
+.card-each .MuiSvgIcon-root {
   font-size: 4.5rem !important;
 }
-.card-each--content{
+.card-each--content {
   font-size: 0.6rem;
   color: gray;
 }
-section{
+section {
   margin-top: 3rem;
 }
 
-
-
-
-
-
-
-
-
-
 /* -------------------------------------------Slider------------------------------------------ */
 
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 
+.image {
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+}
 
+.right-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  right: 32px !important;
+  font-size: 3rem !important;
+  color: black !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
+  user-select: none !important;
+}
 
+.left-arrow {
+  position: absolute !important;
+  top: 50% !important;
+  left: 32px !important;
+  font-size: 3rem !important;
+  color: black !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
+  user-select: none !important;
+}
 
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
 
-
-
-
-
-
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
