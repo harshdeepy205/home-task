@@ -15,7 +15,7 @@ const ImageSlider = ({ slides }) => {
     }
 
     const prevSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current - 1);
+        setCurrent(current === 0 ? length - 1 : current - 1);
     }
     console.log(current)
 
@@ -25,10 +25,8 @@ const ImageSlider = ({ slides }) => {
     }
 
 
-
     return (
         <section className="slider">
-            {/* <h1>hello</h1> */}
             <NavigateBeforeSharpIcon className="left-arrow" onClick={prevSlide} />
             <NavigateNextSharpIcon className="right-arrow" onClick={nextSlide} />
             {SliderData.map((slide, index) => {
